@@ -1,7 +1,7 @@
 import sys
 import math
 import os
-
+import time
 # Class for bit reading
 
 
@@ -125,8 +125,9 @@ def main():
 		
 	input = sys.argv[1]
 	output = sys.argv[2]
-	
+	start_time = time.time()
 	decompress(input, output)
+	print("--- %s seconds ---" % (time.time() - start_time))
 
 
 if __name__ == "__main__": main()

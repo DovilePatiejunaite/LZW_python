@@ -1,6 +1,6 @@
 import sys
 import math
-
+import time
 # Class for bit operations - write
 
 
@@ -118,7 +118,8 @@ def main():
     output = sys.argv[2]
     dict_limit = int(sys.argv[3])
     dict_freeze = int(sys.argv[4])
-
+    start_time = time.time()
     compress(input, output, dict_limit, dict_freeze)
+    print("--- %s seconds ---" % (time.time() - start_time))
 
 if __name__ == "__main__": main()
